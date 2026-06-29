@@ -244,8 +244,7 @@ namespace MiniL29._06._2026
                     Console.WriteLine("Yanlış ID!");
                     return;
                 }
-
-                // isTracking = true, çünki Update üçün entity-ni izləməliyik
+                
                 var employee = empRepo.GetById(id, isTracking: true);
                 if (employee == null)
                 {
