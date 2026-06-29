@@ -1,4 +1,5 @@
-﻿using MiniL29._06._2026.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using MiniL29._06._2026.Data;
 using System.Text;
 
 namespace MiniL29._06._2026
@@ -15,7 +16,7 @@ namespace MiniL29._06._2026
                 new System.Globalization.CultureInfo("az-Latn-AZ");
             using (AllDbSystem db = new AllDbSystem())
             {
-                db.Database.EnsureCreated();
+                db.Database.Migrate();
             }
             StartMenu menu = new StartMenu();
             menu.Run();

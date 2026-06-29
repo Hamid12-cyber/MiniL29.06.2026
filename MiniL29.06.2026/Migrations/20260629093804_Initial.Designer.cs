@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniL29._06._2026.Data;
 
@@ -10,9 +11,11 @@ using MiniL29._06._2026.Data;
 namespace MiniL29._06._2026.Migrations
 {
     [DbContext(typeof(AllDbSystem))]
-    partial class AllDbSystemModelSnapshot : ModelSnapshot
+    [Migration("20260629093804_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
